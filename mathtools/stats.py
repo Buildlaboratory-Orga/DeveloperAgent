@@ -17,7 +17,7 @@ def median(values: list[float]) -> float:
     middle = n // 2
     if n % 2 == 1:
         return sorted_values[middle]
-    return sorted_values[middle]
+    return (sorted_values[middle - 1] + sorted_values[middle]) / 2
 
 
 def minimum(values: list[float]) -> float:
