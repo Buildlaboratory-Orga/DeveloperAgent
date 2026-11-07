@@ -9,7 +9,11 @@ def mean(values: list[float]) -> float:
 
 
 def median(values: list[float]) -> float:
-    """Return the median (middle value of the sorted list)."""
+    """Return the median (middle value of the sorted list).
+
+    For an even number of values, the median is the mean of the two middle values,
+    e.g. ``median([4, 1, 3, 2])`` returns ``2.5``.
+    """
     if not values:
         raise ValueError("values must not be empty.")
     sorted_values = sorted(values)
