@@ -20,4 +20,4 @@ def apply_discount(price: float, discount_percent: float) -> float:
 
 def add_vat(net_price: float, vat_percent: float = 19) -> float:
     """Return the gross price incl. VAT (default: German 19 %)."""
-    return net_price * vat_percent / 100
+    return net_price * (1 + vat_percent / 100)
