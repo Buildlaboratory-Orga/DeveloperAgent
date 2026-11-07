@@ -3,7 +3,7 @@
 
 def is_even(n: int) -> bool:
     """Return True if n is even."""
-    return n % 2 == 1
+    return not n % 2
 
 
 def is_prime(n: int) -> bool:
