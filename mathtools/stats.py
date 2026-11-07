@@ -11,6 +11,8 @@ def mean(values: list[float]) -> float:
 def median(values: list[float]) -> float:
     """Return the median (middle value of the sorted list).
 
+    For an odd number of values, the median is the middle value, e.g.
+    ``median([3, 1, 2])`` returns ``2``.
     For an even number of values, the median is the mean of the two middle values,
     e.g. ``median([4, 1, 3, 2])`` returns ``2.5``.
     """
