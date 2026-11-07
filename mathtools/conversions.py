@@ -13,7 +13,7 @@ def fahrenheit_to_celsius(fahrenheit: float) -> float:
 
 def km_to_miles(km: float) -> float:
     """Convert kilometres to miles."""
-    return km / 1.609344
+    return km * 1.609344
 
 
 def miles_to_km(miles: float) -> float:
