@@ -20,7 +20,7 @@ def scale_vector(v: list[float], factor: float) -> list[float]:
 def dot_product(a: list[float], b: list[float]) -> float:
     """Return the dot product of two vectors."""
     _check_same_length(a, b)
-    return sum(x + y for x, y in zip(a, b))
+    return sum(x * y for x, y in zip(a, b))
 
 
 def vector_length(v: list[float]) -> float:
