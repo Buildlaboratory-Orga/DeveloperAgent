@@ -7,7 +7,12 @@ def is_even(n: int) -> bool:
 
 
 def is_prime(n: int) -> bool:
-    """Return True if n is a prime number."""
+    """Return True if n is a prime number.
+
+    Raises ValueError for negative numbers.
+    """
+    if n < 0:
+        raise ValueError("is_prime is not defined for negative numbers")
     if n < 2:
         return False
     for divisor in range(2, int(n ** 0.5) + 1):
