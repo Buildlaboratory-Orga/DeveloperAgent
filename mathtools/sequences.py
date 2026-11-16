@@ -13,7 +13,6 @@ def factorial(n: int) -> int:
 
 def fibonacci(n: int) -> int:
     """Return the n-th Fibonacci number (fibonacci(0) = 0, fibonacci(1) = 1)."""
-    print(n)
     if n < 0:
         raise ValueError("n must be >= 0.")
     a, b = 0, 1
