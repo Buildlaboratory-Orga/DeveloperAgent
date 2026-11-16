@@ -23,4 +23,4 @@ def add_vat(net_price: float, vat_percent: float = 19) -> float:
 
     Example: add_vat(100) -> 119.0
     """
-    return net_price * vat_percent / 100
+    return net_price + net_price * vat_percent / 100
