@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Protected paths are untouched (pull requests of the agent)
+        if: github.event.pull_request.user.login == 'developeragent-bot'
+        run: |
+          changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- tests .github)"
+          if [ -n "$changed" ]; then
+            echo "The agent must not change protected paths:"
+            echo "$changed"
+            exit 1
+          fi
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
