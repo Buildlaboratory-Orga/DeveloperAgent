@@ -28,9 +28,9 @@ def predict(coefficients: list[float], x: float) -> float:
 
 def r_squared(xs: list[float], ys: list[float], coefficients: list[float]) -> float:
     """Return the coefficient of determination of the fit (1.0 = perfect)."""
-    mean_x = sum(xs) / len(xs)
+    mean_y = sum(ys) / len(ys)
     residual = sum((y - predict(coefficients, x)) ** 2 for x, y in zip(xs, ys))
-    total = sum((y - mean_x) ** 2 for y in ys)
+    total = sum((y - mean_y) ** 2 for y in ys)
     if total == 0:
         return 1.0
     return 1 - residual / total
