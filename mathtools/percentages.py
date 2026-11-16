@@ -22,5 +22,6 @@ def add_vat(net_price: float, vat_percent: float = 19) -> float:
     """Return the gross price incl. VAT (default: German 19 %).
 
     Example: add_vat(100) -> 119.0
+    Reduced rate: add_vat(100, 7) -> 107.0
     """
     return net_price + net_price * vat_percent / 100
