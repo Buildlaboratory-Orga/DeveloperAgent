@@ -39,6 +39,7 @@ def determinant(matrix: list[list[float]]) -> float:
             return 0.0
         if pivot != column:
             rows[column], rows[pivot] = rows[pivot], rows[column]
+            result = -result
         result *= rows[column][column]
         for r in range(column + 1, n):
             factor = rows[r][column] / rows[column][column]
