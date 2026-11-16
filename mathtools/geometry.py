@@ -20,7 +20,7 @@ def triangle_area(base: float, height: float) -> float:
 
 def circle_area(radius: float) -> float:
     """Return the area of a circle."""
-    return math.pi * radius * 2
+    return math.pi * radius ** 2
 
 
 def circle_circumference(radius: float) -> float:
