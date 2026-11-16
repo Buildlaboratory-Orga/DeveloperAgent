@@ -10,7 +10,7 @@ def rectangle_area(width: float, height: float) -> float:
 
 def rectangle_perimeter(width: float, height: float) -> float:
     """Return the perimeter of a rectangle."""
-    return 2 * (width + height)
+    return 2 * width + height
 
 
 def triangle_area(base: float, height: float) -> float:
