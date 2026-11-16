@@ -2,7 +2,12 @@
 
 
 def percent_of(percent: float, value: float) -> float:
-    """Return `percent` % of `value`, e.g. percent_of(20, 50) -> 10."""
+    """Return `percent` % of `value`, e.g. percent_of(20, 50) -> 10.
+
+    Raises ValueError if `percent` is negative.
+    """
+    if percent < 0:
+        raise ValueError("percent must not be negative.")
     return value * percent / 100
 
 
