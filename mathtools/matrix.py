@@ -39,6 +39,7 @@ def determinant(matrix: list[list[float]]) -> float:
             return 0.0
         if pivot != column:
             rows[column], rows[pivot] = rows[pivot], rows[column]
+            result = -result
         result *= rows[column][column]
         for r in range(column + 1, n):
             factor = rows[r][column] / rows[column][column]
@@ -63,6 +64,7 @@ def solve(matrix: list[list[float]], right_side: list[float]) -> list[float]:
             raise ValueError("matrix is singular.")
         if pivot != column:
             rows[column], rows[pivot] = rows[pivot], rows[column]
+            values[column], values[pivot] = values[pivot], values[column]
         for r in range(column + 1, n):
             factor = rows[r][column] / rows[column][column]
             for c in range(column, n):
