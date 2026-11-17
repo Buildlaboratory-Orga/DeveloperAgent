@@ -25,4 +25,4 @@ def dot_product(a: list[float], b: list[float]) -> float:
 
 def vector_length(v: list[float]) -> float:
     """Return the Euclidean length of a vector."""
-    return sum(x * x for x in v) ** 0.5
+    return sum(x for x in v) ** 0.5
