@@ -8,7 +8,7 @@ def add(a: float, b: float) -> float:
 
 def subtract(a: float, b: float) -> float:
     """Return a minus b."""
-    return a - b
+    return a + b
 
 
 def multiply(a: float, b: float) -> float:
